@@ -1,0 +1,63 @@
+job: extension
+config:
+  name: img_guidance
+  process:
+  - type: sd_trainer_inpaint
+    training_folder: models
+    performance_log_every: 5000
+    device: cuda:0
+    network:
+      type: lora
+      linear: 16
+      linear_alpha: 16
+    save:
+      dtype: float16
+      save_every: 50
+      max_step_saves_to_keep: 100
+      push_to_hub: false
+    datasets:
+    - folder_path: data/IMG
+      mask_path: data/MASK_NEW
+      caption_ext: txt
+      caption_dropout_rate: 0.05
+      shuffle_tokens: false
+      cache_latents_to_disk: true
+      resolution:
+      - 1024
+    train:
+      batch_size: 1
+      steps: 6000
+      gradient_accumulation_steps: 1
+      train_unet: true
+      train_text_encoder: false
+      gradient_checkpointing: true
+      noise_scheduler: flowmatch
+      optimizer: adamw8bit
+      lr: 0.0001
+      transfer_and_restore: true
+      split_scale: 8
+      ema_config:
+        use_ema: true
+        ema_decay: 0.99
+      dtype: bf16
+    model:
+      name_or_path: black-forest-labs/FLUX.1-dev
+      is_flux: true
+      quantize: true
+      transfer_and_restore: true
+    sample:
+      sampler: flowmatch
+      sample_every: 50
+      width: 1024
+      height: 1024
+      image: data/IMG/2017_45509279_041.png
+      prompts:
+      - Change the person's hair color to blonde [SPLIT] Human Face
+      neg: ''
+      seed: 42
+      walk_seed: true
+      guidance_scale: 1.0
+      sample_steps: 35
+meta:
+  name: img_guidance
+  version: '1.0'

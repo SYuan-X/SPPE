@@ -9,9 +9,9 @@ This repository contains the official data preparation and implementation code f
 ---
 
 ## 1. Dataset Download
-Source Dataset can be downloaded from [Link](https://github.com/tribhuvanesh/vpa.git), [Link](https://github.com/tribhuvanesh/visual_redactions.git) and [Link](https://anranxu.github.io/DIPA2_VIS/)
-Dataset (source/surrogate before/after pairs) can be downloaded from:
+The raw images and annotations used to construct our benchmark are derived from publicly available source datasets. These original datasets should be obtained from their official sources, including [Link](https://github.com/tribhuvanesh/vpa.git), [Link](https://github.com/tribhuvanesh/visual_redactions.git) and [Link](https://anranxu.github.io/DIPA2_VIS/)
 
+Our processed benchmark dataset, including the source/surrogate before-and-after editing pairs, is available at:
 [Link](https://drive.google.com/drive/folders/1Kl2dR6vuakLvN8JqzTV3vdpVS0lW6SDJ?usp=drive_link)
 
 Each sample contains **two editing pairs**:

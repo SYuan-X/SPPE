@@ -1,4 +1,4 @@
-# SPPE dataset and SOER baseline
+# SPPE dataset
 
 This repository contains the official data preparation and implementation code for the paper:
 

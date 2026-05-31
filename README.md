@@ -9,7 +9,7 @@ This repository contains the official data preparation and implementation code f
 ---
 
 ## 1. Dataset Download
-
+Source Dataset can be downloaded from [Link](https://github.com/tribhuvanesh/vpa.git), [Link](https://github.com/tribhuvanesh/visual_redactions.git) and [Link](https://anranxu.github.io/DIPA2_VIS/)
 Dataset (source/surrogate before/after pairs) can be downloaded from:
 
 [Link](https://drive.google.com/drive/folders/1Kl2dR6vuakLvN8JqzTV3vdpVS0lW6SDJ?usp=drive_link)
@@ -107,19 +107,20 @@ python analysis.py
 ```
 
 
-Our code is built on **ai-toolkit**, and we gratefully acknowledge the excellent work of **Edit-Transfer**: [Link](https://github.com/CUC-MIPG/Edit-Transfer.git)  . We use only the train and test subsets, while the val subset is also provided for users who may need it.
+Our code is built on **ai-toolkit**, we gratefully acknowledge their excellent work [Link]([https://github.com/CUC-MIPG/Edit-Transfer.git](https://github.com/ostris/ai-toolkit.git)). 
 
 
 ## Citation
 
 If you find our work useful, please cite:
 ```python
-@inproceedings{
-anonymous2025when,
-title={When Privacy Meets Recovery: The Overlooked Half of Surrogate-Driven Privacy Preservation for {MLLM} Editing},
-author={Anonymous},
-booktitle={The Fortieth AAAI Conference on Artificial Intelligence},
-year={2025},
-url={https://openreview.net/forum?id=iNyy28q0na}
+@inproceedings{xu2026privacy,
+  title={When Privacy Meets Recovery: The Overlooked Half of Surrogate-Driven Privacy Preservation for MLLM Editing},
+  author={Xu, Siyuan and Liu, Yibing and Chen, Peilin and Li, Yung-Hui and Wang, Shiqi and Kwong, Sam},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={40},
+  number={42},
+  pages={35958--35966},
+  year={2026}
 }
 ```

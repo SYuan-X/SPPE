@@ -107,7 +107,7 @@ python analysis.py
 ```
 
 
-Our code is built on **ai-toolkit**, we gratefully acknowledge their excellent work [Link]([https://github.com/CUC-MIPG/Edit-Transfer.git](https://github.com/ostris/ai-toolkit.git)). 
+Our code is built on **ai-toolkit**, we gratefully acknowledge their excellent work [Link](https://github.com/ostris/ai-toolkit.git). 
 
 
 ## Citation

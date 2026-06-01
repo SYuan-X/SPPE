@@ -2,8 +2,6 @@
 
 This repository contains the official implementation of **C2E-S2SER** for surrogate-to-source edit recovery in privacy-preserving MLLM image editing.
 
-## Dataset
-The processed SPPE benchmark dataset can be downloaded from:[Link](https://github.com/SYuan-X/SPPE.git)
 
 ## Training
 

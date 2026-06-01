@@ -1,0 +1,6 @@
+models/
+viz/
+data/
+.ipynb_checkpoints/
+ViT-L-14.pt
+new_edit.py

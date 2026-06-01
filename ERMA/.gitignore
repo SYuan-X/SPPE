@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+checkpoints_test/
+results/
+pretrained/
+*.log
+.DS_Store

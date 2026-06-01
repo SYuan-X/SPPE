@@ -47,11 +47,8 @@ python train.py \
   --ckpt_dir checkpoints
 ```
 
-The model is evaluated on the validation set periodically. Best checkpoints are saved to `checkpoints/best.pt`. To resume:
+The model is evaluated on the validation set periodically. Best checkpoints are saved to `checkpoints/best.pt`. Our pretrain model is [Link](https://drive.google.com/file/d/1ocSo-u6m2040Nv2t_H85WFIJBbZk7mJV/view?usp=drive_link)
 
-```bash
-python train.py --data_root /path/to/data --resume checkpoints/best.pt
-```
 
 ## Evaluation
 

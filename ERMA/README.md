@@ -47,7 +47,7 @@ python train.py \
   --ckpt_dir checkpoints
 ```
 
-The model is evaluated on the validation set periodically. Best checkpoints are saved to `checkpoints/best.pt`. Our pretrain model is [Link](https://drive.google.com/file/d/1ocSo-u6m2040Nv2t_H85WFIJBbZk7mJV/view?usp=drive_link)
+The model is evaluated on the validation set periodically. Best checkpoint (best on validation set) is saved to `checkpoints/best.pt`. Our pretrain model is [Link](https://drive.google.com/file/d/1ocSo-u6m2040Nv2t_H85WFIJBbZk7mJV/view?usp=drive_link)
 
 
 ## Evaluation

@@ -40,14 +40,6 @@ class ClipSimilarity(nn.Module):
         return image_features
 
     def source_keep(self, img1_tensor, img2_tensor):
-        # 1. 加载图像
-        # img1_tensor = img1_tensor.unsqueeze(0)  # (1, 3, H, W)
-        # img2_tensor = img2_tensor.unsqueeze(0)
-        # p
-        # print(img1_tensor.shape)
-        # print(print(img1.max(), img1.min()) )
-    
-        # 2. 计算 SSIM & PSNR（需转 numpy）
         img1_np = img1_tensor.squeeze(0).cpu().permute(1, 2, 0).numpy()  # HWC
         img2_np = img2_tensor.squeeze(0).cpu().permute(1, 2, 0).numpy()    
         # print(img1_np.max(), img1_np.min()) 
@@ -60,7 +52,6 @@ class ClipSimilarity(nn.Module):
     # img1, img2: (1, 3, H, W)
     # mask: (1, 1, H, W), values in {0, 1}
 
-        # 只保留 mask 区域
         masked_img1 = img1 * mask
         reverse_masked_img1 = img1 * (1- mask)
         # masked_img2 = img2 * mask
@@ -83,12 +74,7 @@ class ClipSimilarity(nn.Module):
 
         consistency_score_gt = F.cosine_similarity(test_features_1, image_features_1)
 
-        # transfer consistency with LVLM(生成的图片与text吻合度相较于直接使用LVLM差别有多少)
-        consistency_score=0
-        # consistency_score = F.cosine_similarity(test_features_1 - text_features, image_features_1 - text_features)
-
-        # transfer consistency with exemplar（生成的图片是否成功转移了代理的编辑）
-        # direction_sim = (F.cosine_similarity(exemplar_image_features_1 - exemplar_image_features_0, test_features_1 - image_features_0) + 2*masked_direction_sim)/3
+        consistency_score=03
         direction_sim = F.cosine_similarity(exemplar_image_features_1 - exemplar_image_features_0, test_features_1 - image_features_0)
 
         ssim_score, psnr_score  = self.source_keep(image_0, test_1) 

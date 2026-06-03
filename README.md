@@ -106,9 +106,7 @@ Benchmark metrics can be computed using:
 python analysis.py
 ```
 
-
-Our code is built on **ai-toolkit**, we gratefully acknowledge their excellent work [Link](https://github.com/ostris/ai-toolkit.git). 
-
+Our code is built on [ai-toolkit](https://github.com/ostris/ai-toolkit.git) as the training framework.
 
 ## Citation
 

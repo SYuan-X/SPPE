@@ -57,12 +57,16 @@ class ERMADataset(Dataset):
         return self.tf(Image.open(self.data_root / rel_path).convert("RGB"))
 
     def __getitem__(self, idx):
+    
         r = self.records[idx]
+        label = float(r["label"])
+        # raw cosine label: [-1, 1] -> [0, 1]
+        label = (label + 1.0) / 2.0
         return {
             "source":    self._load(r["source"]),
             "surrogate": self._load(r["surrogate"]),
             "prompt":    get_prompt_by_code(r["code"]),
-            "label":     torch.tensor(float(r["label"]), dtype=torch.float32),
+            "label":     torch.tensor(label, dtype=torch.float32),
             "meta": {
                 "category": r["category"],
                 "stem":     r["stem"],
